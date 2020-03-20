@@ -91,6 +91,68 @@ int factorial(int num)
 
 	}
 	
+void limites(void)
+{
+
+       system ("cls");
+       int inf=0, sup, b=0, ret=0;
+       char esc, c;
+       printf("\nIngrese el rango inferior:  ");
+       scanf("%d",&inf);
+       printf("\nIngrese el rango superior:  ");
+       scanf("%d",&sup);
+
+	if(inf > sup || (inf == c) || (sup == c))
+	{
+    printf("\n\t\tERROR. Ingrese bien los limites.\n\n");
+     system("pause");
+	}
+ else
+ 	{
+     do
+	  {
+      int limites();
+       ret=limite(sup, inf);
+       printf("\n\nEl numero %d esta dentro del rango", ret);
+    printf("\n\nTecla ESC para salir, cualquiere otra para cont.");
+        esc = getch();
+ 	  }while(esc != 27);
+	 }
+	system("pause");
+}
+//   ****************** Funcion en donde se va a realizar la operacion *************
+int limite(int sup, int inf)
+{
+ int b=0, num=0, retorno=0;
+    char esc, c;
+
+    if((inf!=c) || (sup!=c))
+  {
+     do
+     {
+           printf("\n\n--------------------------");
+      	   printf("\nIngrese cualquier numero (entero): ");
+           scanf("%d",&num);
+
+
+           if(num<=sup && num >= inf)
+           {
+               retorno = num;
+               return (retorno);
+           }
+            else
+            {
+             printf("\n\nValor fuera del rango o no valido.\n");
+              system("pause");
+            }
+      }while(b!=1);
+        }
+
+         else
+         {
+             printf("\n\nERROR.");
+         }
+    }
 
 
 
