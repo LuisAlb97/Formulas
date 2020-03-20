@@ -155,5 +155,54 @@ int limite(int sup, int inf)
     }
 
 
+//***********PROGRAMA - Area del trapecio **********************************
+void trapecio(void)
+{
+   system ("cls");
+  int h=0, bm=0, bma=0, result;
+  char c=0;
 
+    printf("***************** Calcular el area de un trapecio **************** \n\n");
+    printf("NOTA: Se supondra en \"cm\"  las medidas\n\n");
+    printf("\nIngrese la altura (en enteros): ");
+    scanf("%d",&h);
+    printf("\nIngrese la base menor (en enteros): ");
+    scanf("%d",&bm);
+    printf("\nIngrese la base mayor (en enteros): ");
+    scanf("%d",&bma);
+     if((h == c)||(bm == c)||(bma == c))
+     {
+        system("cls");
+         printf("\n\nERROR. Ingrese los valores correctamente.\n\n");
+          system("pause");
+     }
+      else
+       {
+            result = area(h, bm, bma);
+           printf("El area del trapecio es: %d\n\n", result);
+       }
+	system("pause");
+}
+//   ****************** Funcion en donde se va a realizar la operacion *************
+int area(int h, int bm, int bma)
+{
+    return (((bm+bma)/2)*h);
+}
+
+void formula(void)
+{
+ system ("cls");
+ float a=0, b=0, c=0;
+
+	fflush(stdin);
+	printf("Ingrese un valor para a \n");
+	 scanf("%f", &a);
+	 printf("Ingrese un valor para b \n");
+	  scanf("%f", &b);
+	  printf("Ingrese un valor para c \n");
+	   scanf("%f", &c);
+
+	   formulaGeneral(a, b, c);
+  system("pause");
+}
 
