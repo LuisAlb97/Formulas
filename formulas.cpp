@@ -12,6 +12,18 @@
 #include<math.h>
 #include<string.h>
 
+void factorial1(void);
+void limites(void);
+void trapecio(void);
+void formula(void);
+void letras(void);
+
+
+int factorial(int );
+int limite(int sup, int inf);
+int area(int , int , int );
+void formulaGeneral(float a, float b, float c);
+char palindromo(char cad[20]);
 
 int main(void)
 {
@@ -39,6 +51,46 @@ int main(void)
    }while(op != 6);
 }
 
+
+
+void factorial1(void)
+{
+   system ("cls");
+   int aux, num=0;
+
+     printf("Ingrese un numero: ");
+     scanf("%d", &num);
+
+     aux=factorial(num); //aux guarda el return de la funcion
+
+     printf("El factorial de %d es: %d\n\n", num, aux);
+	 system("pause");
+}
+//   ****************** Funcion en donde se va a realizar la operacion *************
+int factorial(int num)
+	{
+	   long int aux=1, i=1;
+	   char c;
+
+	  if(num!= c )
+    {
+      for(i=1; i<=num; i++)
+         {
+              aux *=i;
+          }
+
+           return aux; //aqui retorna el valor aux a "num" de factorial(int num)
+   }
+        else
+        {
+          printf("ERROR. Vuelva a intentarlo\n\n");
+           system("pause");
+           system("cls");
+        }
+
+
+	}
+	
 
 
 
