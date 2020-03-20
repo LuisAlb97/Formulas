@@ -205,4 +205,36 @@ void formula(void)
 	   formulaGeneral(a, b, c);
   system("pause");
 }
+//   ****************** Funcion en donde se va a realizar la operacion *************
+void formulaGeneral(float a, float b, float c)
+{
+	float d=0, x1=0;
+
+	  if(a!=0)
+		{
+	    	d=pow(b,2)-(4*a*c);
+
+	    	if(d < 0)
+			{
+				 printf("El resultado en positivo es: %.2f + %.2fi", (-b)/(2*a), (sqrt((d)*(-1)))/(2*a));
+				  printf("\n El resultado en negativo es: %.2f - %.2fi\n\n", (-b)/(2*a), (sqrt((d)*(-1)))/(2*a));
+	    	}
+	    	 else if(d > 0)
+			  {
+			  	printf("El resultado positivo es: %.2f", (-b+sqrt(d))/(2*a));
+			  	 printf("\nEl resultado negativo es: %.2f\n\n", (-b-sqrt(d))/(2*a));
+	    	  }
+	    }
+
+	      else
+	       {
+	         printf("Ingrese un valor en a diferente de 0 \n\n");
+	          system("pause");
+	           formula();
+	          }
+}
+
+
+
+
 
