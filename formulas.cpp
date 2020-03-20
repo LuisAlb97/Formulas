@@ -234,7 +234,34 @@ void formulaGeneral(float a, float b, float c)
 	          }
 }
 
+void letras(void)
+{
+	system("cls");
+	char cad1[20],cad2[20];
+	printf("******************** Convertir letras de minusculas a mayusculas ***************** \n\n");
+	printf("Ingrese una palabra: ");
+				fflush(stdin);
+				gets(cad1);
+				cad2[15]=palindromo(cad1);//recibe la cadena
+				system("pause");
+}
+char palindromo(char cad[20])
+{ 
+	char cad2[20];
+	strupr(cad);//convertir la cadena a mayuscualas
+	strcpy(cad2,cad);//copeando el contenido de la cadena c a cad2
+	strrev(cad2);//invierte la cadena dada
+	if(strcmp(cad2,cad)==0)//comparacion de cadenas
+	  {
+	  	printf("Es polindromo\n");
+	  }
+	  printf("\n");
+	  printf("La conversion es: ");
+	  puts(cad);
+	  printf("\n");
+	return cad[20];
 
+}
 
 
 
